@@ -1,11 +1,11 @@
 import { Router } from 'express';
 
-import { CreatePedidosController } from './useCases/pedidos/controllers/CreatePedidosController';
+import { CreateCallController } from './useCases/call/controllers/CreateCallController';
 
 const routes = Router();
 
-const createPedidosController = new CreatePedidosController();
+const createCallController = new CreateCallController();
 
-routes.post('/pedidos', createPedidosController.handle);
+routes.post('/call', createCallController.handle);
 
 export { routes };
